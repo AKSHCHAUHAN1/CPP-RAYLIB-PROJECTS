@@ -111,11 +111,45 @@ login.exe
 
 ---
 
+## 🏦 Banking System GUI
+
+A **Banking System** simulator with a modern Raylib-based GUI.  
+Manage multiple customers, perform deposits, withdrawals, and fund transfers, and view full transaction history.
+
+### ✨ Features
+- Add new **customers** dynamically.
+- Deposit and withdraw money with validation.
+- Transfer funds between accounts (with proper error handling for insufficient funds).
+- Transaction history with timestamped logs.
+- Scrollable transaction history panel with a draggable scrollbar.
+- Modal popup for account transfers, ensuring correct sender account is used.
+
+### ▶️ How to Use
+1. Enter a **customer name** and click **Add Customer**.  
+2. Select a customer to activate their account.  
+3. Enter an amount and choose **Deposit**, **Withdraw**, or **Transfer**.  
+4. For transfers, select the target account from the popup window.  
+5. Scroll through transaction history to review past operations.  
+
+### ⚡ Build & Run
+
+#### macOS / Linux
+```bash
+g++ BankingSystemGUI.cpp -o banking -std=c++17 -I/opt/homebrew/include \
+  -L/opt/homebrew/lib -lraylib -framework OpenGL -framework Cocoa -framework IOKit
+./banking
+
+```
+#### Windows (MinGW)
+```bash
+g++ BankingSystemGUI.cpp -o banking.exe -std=c++17 -lraylib -lopengl32 -lgdi32 -lwinmm
+banking.exe
+```
+---
 ## 🛠️ Technologies Used
 - **C++17**
 - **Raylib** (for graphics & input handling)
 - File I/O for persistent storage
-
 ---
 
 ## 🚀 Getting Started
